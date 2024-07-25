@@ -10,7 +10,7 @@ github.com/prestonf99
 In this repository, we implement a Gaussian Hidden Markov model to financial time series that generates binary predictions on future returns. The model's outputs are either 0 or 1, with 0 being an indication to the market participant to flatten positions, 1 being an indication to go long. There are two files in this repository, a notebook walking through the process (hidden_markov.ipynb) and a background script that processes data, performs calculations, and generates plots for the model. 
 
 ### Data Provider
-We're using the Yahoo Finance API to get our financial time series. For our purposes, we investigated the S&P 500, but this model can be applied to any ticker on the Yahoo Finance website. You can play around with this model on basically any U.S. equity with easy by changing the 'underlying' in the first cell.  
+We're using the Yahoo Finance API to get our financial time series. For our purposes, we investigated the S&P 500, but this model can be applied to any ticker on the Yahoo Finance website. You can play around with this model on basically any U.S. equity with ease by changing the 'underlying' in the first cell.  
     
 ## Setting it Up
 
@@ -32,7 +32,7 @@ We're using the Yahoo Finance API to get our financial time series. For our purp
 4. Navigate to the folder that contains the files in the repository and ensure that the markov.py & hidden_markov.ipynb are in the same folder. 
 
 
-5. Open hidden_markov.ipynb & hit shift+enter until all of the charts are loaded in (should be relatively quick).
+5. Open hidden_markov.ipynb & hit shift+enter until all of the charts are loaded. Refer to the bottom of this file for troubleshooting tips. 
 
 
 6. The hidden_markov.ipynb file will walk you through the exercise step-by-step; imports, calculations, model configuration, initial testing, scrutinizing the model, and more are all in that file.
@@ -40,7 +40,7 @@ We're using the Yahoo Finance API to get our financial time series. For our purp
 **_Some issues we've ran in to_**
 
 * At times, the model's output will be backwards (Long will be a 0, flat will be a 1), just re-run the model & it shouldn't be an issue.
-* The hmm.GaussianHMM cell, where you set up the model, occasionally gives an error code, just navigate back to it and hit shift+enter again. 
+* The `model = hmm.GaussianHMM(n_components=2, covariance_type='diag', n_iter=1000)`, where you set up the model, occasionally gives an error code, just navigate back to it and hit shift+enter again. 
 
 
 **_Further Testing_**
