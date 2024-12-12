@@ -7,7 +7,7 @@ github.com/prestonf99
 
 
 ## Overview
-In this repository, we implement a Gaussian Hidden Markov model to financial time series that generates binary predictions on future returns. The model's outputs are either 0 or 1, with 0 being an indication to the market participant to flatten positions, 1 being an indication to go long. There are two files in this repository, a notebook walking through the process (hidden_markov.ipynb) and a background script that processes data, performs calculations, and generates plots for the model. The general idea here is "what would happen if we built a model that assisted market participants in sidestepping drawdowns, and what would the returns look like". As seen below, before implementing a training/testing split, the model and its returns looked pretty great: 
+In this repository, we implement a Gaussian Hidden Markov model to financial time series that generates binary predictions on future returns. The model's outputs are either 0 or 1, with 0 being an indication to the market participant to flatten positions, 1 being an indication to go long. The model pays attention to the returns of the index and the realized volatility of the index to make its predictions. There are two files in this repository, a notebook walking through the process (hidden_markov.ipynb) and a background script that processes data, performs calculations, and generates plots for the model. The general idea here is "what would happen if we built a model that assisted market participants in sidestepping drawdowns, and what would the returns look like". As seen below, before implementing a training/testing split, the model and its returns looked pretty great: 
 ![Model Returns](HM_strategy.png)
 
 ### Implementing a Training & Testing Split
